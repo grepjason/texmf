@@ -29,6 +29,15 @@ wget -O - http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz |
     sudo ./install-tl
 ```
 
+**Linux:** alternative method — use [install-tl-ubuntu](https://github.com/scottkosty/install-tl-ubuntu/tree/master):
+
+```bash
+wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu &&
+     chmod +x ./install-tl-ubuntu
+```
+
+This script uses the TeX Live installer to install TeX Live so that LaTeX packages can be updated through CTAN with tlmgr. To do this, the official TeX Live installer is downloaded and used and apt is informed that TeX dependencies are satisfied. Thus, when you want to install a program with apt-get that depends on TeX Live, apt will not try to install the TeX Live packages from the Ubuntu repositories.
+
 ### (Optional) Install dependencies for `minted` and `latexindent`
 
 ```bash
