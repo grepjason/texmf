@@ -1,0 +1,70 @@
+% !TeX TS-program = xelatex
+% !TeX builder = latexmk
+
+%% XeLaTeX stuff:
+%% Normalize any residual Unicode combining accents and write out error messages
+\XeTeXinputnormalization=1
+\tracinglostchars=1
+\tracingonline=1
+\XeTeXgenerateactualtext=1
+
+%% Don't modify the `\DocumentMetadata` command unless you know what it does!
+%% If this command throws an "undefined" error, your LaTeX system is out of date.
+\DocumentMetadata{
+	pdfstandard = a-2b,
+	pdfversion  = 1.7,
+	lang		    = en-US
+}
+
+\documentclass[a4paper,oneside,12pt]{article}
+\usepackage[nomarginpar]{geometry}
+\usepackage{metalogo}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 4pt}
+\setlength{\emergencystretch}{3em}
+\frenchspacing
+
+\clubpenalty=9996
+\widowpenalty=9999
+\brokenpenalty=4991
+
+\predisplaypenalty=10000
+\postdisplaypenalty=1549
+\displaywidowpenalty=1602
+
+\interfootnotelinepenalty 10
+\vfuzz2pt
+\hfuzz2pt
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{sanskrit}
+
+\usepackage{fontspec}
+\defaultfontfeatures[\rmfamily,\sffamily]{Ligatures=TeX}
+\setmainfont[Numbers=Lining,Scale=MatchLowercase]{Brill}
+
+\newfontfamily\devanagarifont[Script=Devanagari,Mapping=romdev,Scale=MatchLowercase]{Shobhika}
+\newcommand{\dn}[1]{\textsanskrit{\devanagarifont#1}}
+
+\title{\XeTeX\ Font Mapping}
+\author{IAST input method for Unicode Devanāgarī}
+\date{\relax}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\bigskip
+
+\begin{verse}
+  \dn{
+    namastuṅgaśiraścumbicandracāmaracārave |\\
+    trailokyanagarārambhamūlastambhāya śambhave || 1 ||\\
+    harakaṇṭhagrahānandamīlitākṣīṃ namāmyumām |\\
+    kālakūṭaviṣasparśajātamūrcchāgamāmiva || 2 ||
+  }
+\end{verse}
+
+\end{document}
