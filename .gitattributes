@@ -1,0 +1,39 @@
+# https://gitattributes.com/
+# Details per file setting:
+#   text    These files should be normalized (i.e. convert CRLF to LF).
+#   binary  These files are binary and should be left untouched.
+# Note that binary is a macro for -text -diff.
+
+# Auto detect
+# Handle line endings automatically for files detected as
+# text and leave all files detected as binary untouched.
+# This will handle all files NOT defined below.
+
+*          text=auto
+
+# Documents and source files
+*.bibtex   text diff=bibtex
+*.cff      text
+*.cls      text diff=tex
+*.inc      text
+*.ini      text
+*.lua      text
+*.md       text diff=markdown
+*.pdf           diff=astextplain
+*.sty      text diff=tex
+*.tex      text diff=tex
+
+# Fonts
+*.ttf             binary
+*.otf             binary
+
+# TECkit
+*.map      text
+*.tec             binary
+
+# Exclude files from exporting
+.editorconfig     export-ignore
+.gitattributes    export-ignore
+.github           export-ignore
+.gitignore        export-ignore
+.gitkeep          export-ignore
