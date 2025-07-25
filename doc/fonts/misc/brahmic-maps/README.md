@@ -2,18 +2,13 @@
 
 ## ISO 15919 TECkit mappings for Indic scripts in XeTeX
 
-This package implements a set of TECkit mappings based on ISO 15919
-*Transliteration of Devanāgarī and related Indic scripts into Latin characters*
-for reverse transliteration of Latin-based characters into various Indic scripts
-in the Brahmic family.
+This package implements a set of [TECkit](https://software.sil.org/teckit/) mappings based on ISO 15919 *Transliteration of Devanāgarī and related Indic scripts into Latin characters* for reverse transliteration of Latin-based characters into various Indic scripts in the Brahmic family.
 
-Full documentation including some examples is in brahmic.pdf.
+Full documentation including some examples is in [brahmic.pdf](/doc/fonts/misc/brahmic-maps/brahmic.pdf).
 
-`sanskrit.sty` and `vedic-example.tex` contain some rudimentary examples
-of how to use the maps.
+`sanskrit.sty` and `vedic-example.tex` contain some rudimentary examples of how to use the maps.
 
-To regenerate the `.map` files and rebuild the `.tec` files, connect to
-the build directory and type
+To regenerate the `.map` files and rebuild the `.tec` files, connect to the build directory and type:
 
     make
 
